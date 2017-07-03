@@ -77,29 +77,29 @@ install {
 }
 
 
-bintray {
-  user = project.property('bintrayUser')
-  key = project.property('bintrayApiKey')
-  configurations = ['archives']
-  publish = true
-  pkg {
-    version {
-      name = libVersionCode
-      desc = 'Android view which show camera and notify when there\'s a QR code inside the preview.'
-      released = new Date()
-      vcsTag = libVersionCode
-      gpg {
-        sign = true //Determines whether to GPG sign the files. The default is false
-        passphrase = project.property('gpgPassphrase') //Optional. The passphrase for GPG signing'
-      }
-    }
-    repo = "maven"
-    name = "QRCodeReaderView"
-    websiteUrl = siteUrl
-    vcsUrl = gitUrl
-    licenses = ["Apache-2.0"]
-  }
-}
+//bintray {
+//  user = project.property('bintrayUser')
+//  key = project.property('bintrayApiKey')
+//  configurations = ['archives']
+//  publish = true
+//  pkg {
+//    version {
+//      name = libVersionCode
+//      desc = 'Android view which show camera and notify when there\'s a QR code inside the preview.'
+//      released = new Date()
+//      vcsTag = libVersionCode
+//      gpg {
+//        sign = true //Determines whether to GPG sign the files. The default is false
+//        passphrase = project.property('gpgPassphrase') //Optional. The passphrase for GPG signing'
+//      }
+//    }
+//    repo = "maven"
+//    name = "QRCodeReaderView"
+//    websiteUrl = siteUrl
+//    vcsUrl = gitUrl
+//    licenses = ["Apache-2.0"]
+//  }
+//}
 
 task wrapper(type: Wrapper) {
   gradleVersion = '2.4'
